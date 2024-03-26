@@ -1,9 +1,8 @@
 # 23. Calculate Library Book Return Fine: Develop a program to calculate the fine for 
 # returning a library book past the due date, based on the criteria provided.
-def calculateDue():
-    md = int(input("Enter Month of due(1-12): "))
-    dd = int(input("Enter day of due(1-31): "))
-    yd = int(input("Enter year of due: "))
+17. Calculate Hourly-Based Salary: Implement a program to calculate an employee's salary
+based on the number of hours worked and their hourly pay rate.
+
     m = int(input("Enter Month (1-12): "))
     d = int(input("Enter day (1-31): "))
     y = int(input("Enter year: "))

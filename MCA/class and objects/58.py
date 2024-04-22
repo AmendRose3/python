@@ -7,22 +7,41 @@
 # Additionally, create a method `display()` that prints
 # the length, width, area, and
 # perimeter of the rectangle.
-class rectangle:
-    def __init__(self,l,w):
-        self.l=l
-        self.w=w
+class Rectangle:
+    def __init__(self, l, w):
+        self.l = l
+        self.w = w
+        self.area = 0  # Initialize area as a class attribute
+
     def calculate_area(self):
-        self.area=self.l*self.w
-        print(self.area)
+        # local variable 'area' within the method
+        area = self.l * self.w
+        self.area = area  # Assign the local 'area' to the class attribute
+        print(f"Area: {self.area}")
+
     def calculate_perimeter(self):
-        self.p=2*(self.l+self.w)
-        print(self.p)
+        # local variable 'p' within the method
+        p = 2 * (self.l + self.w)
+        print(f"Perimeter: {p}")
+
     def display(self):
-        print(f"length: {self.l}")
+        print(f"Length: {self.l}")
         print(f"Width: {self.w}")
-        print(f"area: {self.area}")
-        print(f"Perimeter: {self.p}")
-r1=rectangle(2,5)
-r1.calculate_area()
-r1.calculate_perimeter()
-r1.display()
+        print(f"Area: {self.area}")
+        # accessing the local variable 'p' from another method (calculate_perimeter) is not possible here
+
+while True:
+    try:
+        length = float(input("Enter the length of the rectangle (or 'q' to quit): "))
+        if length == 'q':
+            break  # Exit the loop if user enters 'q'
+
+        width = float(input("Enter the width of the rectangle: "))
+        
+        r = Rectangle(length, width)
+        r.calculate_area()
+        r.calculate_perimeter()
+        r.display()
+    except ValueError:
+        print("Invalid input. Please enter a valid number for length and width.")
+

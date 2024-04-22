@@ -4,7 +4,7 @@
 import re
 
 text = input("Enter the text to find emails: ")
-reg = r'\b[A-Z a-z]+[@]{1}[A-Z a-z]+[.]{1}[A-Z a-z]+[.]?[A-Z a-z]{2}\b'
+reg = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
 
 x = re.findall(reg, text)
 if x:
@@ -23,7 +23,3 @@ else:
 # \.: Match a literal dot '.' in the domain part.
 # [A-Z|a-z]{2,}: Match 2 or more uppercase or lowercase letters for the top-level domain (TLD) part.
 # \b: Match another word boundary.
-
-[A-Z a-z]+[@]{1}[A-Z a-z]+[.]{1}[A-Z a-z]+[.]?[A-Z a-z]{2}
-
-

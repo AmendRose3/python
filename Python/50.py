@@ -17,8 +17,6 @@ else:
     print("No URLs found.")
 
 
-
-
 # The regular expression r'https?://\S+?(?=[.,;:\s]|$)' 
 # matches URLs that start with http:// or https://, followed 
 # by non-whitespace characters, and stops before encountering 

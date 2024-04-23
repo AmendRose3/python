@@ -1,22 +1,18 @@
-details_list=[]
+details_list = []
 
 def get_details(n):
-    for _ in range (n):
-        detail_tuple=()
-        name=input()
-        height=int(input())
-        detail_tuple=(name,height)
+    for _ in range(n):
+        name = input("Enter name: ")
+        height = int(input("Enter height: "))
+        detail_tuple = (name, height)
         details_list.append(detail_tuple)
 
 def max_height():
+    max_h = 0
     for i in range(len(details_list)):
-        max_height=max(details_list[i][1],max_height)
-    return max_height
+        max_h = max(details_list[i][1], max_h)
+    return max_h
 
-
-n=int(input("enter number of people:"))
+n = int(input("Enter number of people: "))
 get_details(n)
-max_height()
-
-
-    
+print("Maximum height is:", max_height())
